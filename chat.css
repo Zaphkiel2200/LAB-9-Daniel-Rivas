@@ -1,16 +1,29 @@
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 .chat-container {
     background-color: white;
-    border-radius: 15px;
+    border-radius: 25px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 360px;
     overflow: hidden;
@@ -47,13 +60,13 @@ body {
 }
 .input-area {
     display: flex;
-    padding: 10px;
-    background-color: #f0f2f5;
+    padding: 20px;
+    background-color: #878787;
 }
 #message-input {
     flex-grow: 1;
     border: none;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 20px;
     margin-right: 10px;
     font-size: 14px;
